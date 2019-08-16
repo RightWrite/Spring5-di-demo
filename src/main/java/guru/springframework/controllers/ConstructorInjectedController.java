@@ -1,15 +1,20 @@
 package guru.springframework.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
 import guru.springframework.services.GreetingService;
 
+@Controller
 public class ConstructorInjectedController {
     private GreetingService greetingService;
 
+    @Autowired //optional as constructor autowing is done by default by spring since spring 4
     public ConstructorInjectedController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
-    String sayHello() {
-    return greetingService.sayGreeting();
+    public String sayHello() {
+        return greetingService.sayGreeting();
     }
 }
