@@ -12,6 +12,7 @@ public class PrimaryGermanGreetingService implements GreetingService {
 
     @Override
     public String sayGreeting() {
+
         return "Hallo - primärer Begrüßungsdienst";
     }
 }
