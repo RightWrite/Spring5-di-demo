@@ -4,7 +4,11 @@ guru:
       username: jmsusername
       password: jmspassword
       url: jmsurl
-    username: vishesh
+
+---
+spring:
+  profiles:
+    active: de
 
 
 
