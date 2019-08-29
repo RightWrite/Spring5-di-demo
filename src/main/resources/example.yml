@@ -1,0 +1,41 @@
+# this is a comment
+
+name: Vishesh
+
+names:
+    -Vishesh
+    -John
+    -Jenny
+
+pound-sign: '#'
+
+book: #Comment
+    author: Joe Buck
+    publisher:  random house
+
+truth: yes
+
+another_trueth: True
+more_trueth: true
+
+false: no #No, false, False
+
+string_val: "This is it's quote"
+
+colon_String: "my course: one two three"
+
+include_new_lines: |
+  sfasg f gfgfgfg fg
+  fgfd
+  gf fga d
+
+ignore_new lines: >
+  effwgrgre
+  reg geg
+  regergf
+  re
+
+
+
+
+
