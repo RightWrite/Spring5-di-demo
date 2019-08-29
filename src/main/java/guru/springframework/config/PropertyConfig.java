@@ -21,12 +21,16 @@ import guru.springframework.examplebean.FakeJmsBroker;
 //})
 public class PropertyConfig {
 
-    @Autowired
-    Environment environment;
+//    @Autowired
+//    Environment environment;
+
+    //prog env params GURU_USERNAME=MyOverride;USERNAME=EnvUSername
+
+
     @Value("${guru.username}")
     String user;
 
-    @Value("${guru.password}" )
+    @Value("${guru.password}")
     String password;
 
     @Value("${guru.dburl}")
@@ -47,13 +51,14 @@ public class PropertyConfig {
         FakeDataSource fakeDataSource = new FakeDataSource();
         fakeDataSource.setPassword(password);
         fakeDataSource.setUrl(url);
-        fakeDataSource.setUser(environment.getProperty("USERNAME"));
+//        fakeDataSource.setUser(environment.getProperty("USERNAME"));
+        fakeDataSource.setUser(user);
         return fakeDataSource;
     }
 
     @Bean
     public FakeJmsBroker fakeJmsBroker() {
-        FakeJmsBroker fakeJmsBroker=new FakeJmsBroker();
+        FakeJmsBroker fakeJmsBroker = new FakeJmsBroker();
         fakeJmsBroker.setPassword(jmsPassword);
         fakeJmsBroker.setUrl(jmsUrl);
         fakeJmsBroker.setUsername(jmsUSerName);
