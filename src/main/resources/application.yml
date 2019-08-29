@@ -1,0 +1,10 @@
+
+guru:
+    jms:
+      username: jmsusername
+      password: jmspassword
+      url: jmsurl
+    username: vishesh
+
+
+
